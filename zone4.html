@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>명동</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="close_ic">
+          <img src="/assets/icon/close.svg" alt="" />
+        </div>
+
+        <section class="sec1">
+          <div class="img--block">
+            <img src="/assets/img/zone4_img/sec1_main_img.png" alt="" />
+          </div>
+        </section>
+
+        <div class="sec2">
+          <div class="img--block">
+            <img src="/assets/img/zone4_img/sec2_img01.png" alt="" />
+          </div>
+
+          <div class="sec2-main--content">
+            <img src="/assets/img/zone4_img/sec3_main_img.png" alt="" />
+          </div>
+          <a class="link-pin" href="#link1" aria-label="바프 아몬드 스토어 명동" style="top: 51%; height: 12%; left: 28%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="위글위글집명동" style="top: 51%; height: 12%; left: 71%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="명동 거리" style="top: 64%; height: 12%; left: 50%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="도토리 캐리커쳐 명동점" style="top: 76.6%; height: 12%; left: 29%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="영양센터 본점" style="top: 76.6%; height: 12%; left: 72%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="코스 확인하기" style="top: 89.6%; height: 3%; left: 50%; width: 77%"> </a>
+        </div>
+
+        <!-- <div class="sec3">
+          <div class="img--block">
+            <img src="/assets/img/zone4_img/sec3_main_img.png" alt="" />
+          </div>
+        </div> -->
+
+        <div class="sec4">
+          <div class="img--block">
+            <img src="assets/img/zone4_img/sec4_main_img.png" alt="" />
+          </div>
+          <a class="link-pin" href="#link1" aria-label="명동아트브리즈" style="top: 47%; height: 12%; left: 28%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="진사댁 명동" style="top: 47%; height: 12%; left: 71%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="케이메카" style="top: 61%; height: 12%; left: 50%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="명동성당" style="top: 74%; height: 12%; left: 29%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="뷰티플레이" style="top: 74%; height: 12%; left: 72%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="" style="top: 88.6%; height: 3%; left: 50%; width: 77%"> </a>
+        </div>
+        <div class="sec5">
+          <div class="img--block">
+            <img src="assets/img/zone4_img/sec5_main_img.png" alt="" />
+          </div>
+          <a class="link-pin" href="#link1" aria-label="펜카페" style="top: 46.6%; height: 12%; left: 66%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="램캠프" style="top: 61%; height: 12%; left: 27%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="사유의서재 남산 와인다이닝" style="top: 74%; height: 14%; left: 66%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="코스 확인하기" style="top: 88.6%; height: 3%; left: 50%; width: 77%"> </a>
+        </div>
+        <div class="sec6">
+          <div class="img--block">
+            <img src="assets/img/zone4_img/sec6_main_img.png" alt="" />
+          </div>
+          <a class="link-pin" href="#link1" aria-label="신세계백화점 본점" style="top: 48%; height: 13%; left: 29%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="더 스팟 패뷸러스" style="top: 58%; height: 12%; left: 70%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="명동성당" style="top: 68%; height: 12%; left: 30%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="모와 MOWa" style="top: 78%; height: 12%; left: 70%; width: 37%"> </a>
+          <a class="link-pin" href="#link1" aria-label="코스 확인하기" style="top: 92.3%; height: 3%; left: 50%; width: 77%"> </a>
+        </div>
+        <div class="close--btn">
+          <div class="img--block">
+            <img src="assets/img/zone4_img/close_img.png" alt="" />
+          </div>
+          <a class="link-pin close--link" href="#link1" aria-label="딛기" style="top: 12%; height: 50%; left: 50%; width: 25%"> </a>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const stickySvg = document.querySelector(".close_ic img");
+        const sec1 = document.querySelector(".sec1");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // sec1 안에 있을 때 (원래 색)
+                stickySvg.style.filter = "invert(0)"; // 검정 유지
+              } else {
+                // sec1 벗어날 때 (색 변경)
+                stickySvg.style.filter = "invert(1)"; // 흰색처럼 표현
+              }
+            });
+          },
+          { threshold: 0 }
+        );
+
+        observer.observe(sec1);
+      });
+    </script>
+  </body>
+</html>
