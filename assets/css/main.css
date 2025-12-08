@@ -102,7 +102,7 @@ main {
   display: block;
   border-radius: 10px;
   /* overflow: hidden; */
-  /* border: 2px solid #000; */
+  border: 2px solid #000;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .close--btn {

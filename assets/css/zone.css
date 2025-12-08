@@ -1,0 +1,49 @@
+main {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* sec1 */
+.sec1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6,
+.sec7,
+.sec8,
+.sec9 {
+  position: relative;
+}
+
+/* Link pin (clickable overlay) styles ---------------------------------- */
+.link-pin {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  border: 2px solid #000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.close--btn {
+  position: relative;
+}
+
+
+.img--block img {
+    width: 100%;
+}
+
+section img {
+    width: 100%;
+}
