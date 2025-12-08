@@ -7,7 +7,7 @@ ADVANCED RESET.CSS + TYPOGRAPHY
 
 :root{
   /* --zone01-main--color: #EC8144; */
-  /* --point-color: #FFF100; */
+  --point-color: #ff741e;
 }
 /* 1. 박스 모델 초기화 */
 *,
@@ -22,8 +22,9 @@ ADVANCED RESET.CSS + TYPOGRAPHY
 
 /* 2. HTML 기본 설정 */
 html {
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-family: "Hakgyoansim", "Noto Sans KR", sans-serif;
   font-size: 16px; /* 기본 기준 */
+  font-weight: 500;
   /* line-height: 1.5; */
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
