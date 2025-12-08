@@ -102,7 +102,7 @@ main {
   display: block;
   border-radius: 10px;
   /* overflow: hidden; */
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .close--btn {
@@ -147,9 +147,9 @@ main {
   transform: translateY(0) scale(1);
 } */
 
-/* .link-pin:focus {
+.link-pin:focus {
   outline: none;
-} */
+}
 
 /* .link-pin:focus-visible {
   box-shadow: 0 0 0 4px rgba(255,200,0,0.85);
@@ -217,6 +217,17 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
+.sec5 .btn {
+  color: #ff9f31;
+}
+.sec5 .btn.next {
+  right: -13%;
+}
+.sec5 .btn.prev {
+  left: -13%;
+}
+
 @media (min-width: 1024px) {
   .sec3 .swiper-wrapper {
     display: grid;
@@ -252,15 +263,12 @@ main {
     font-size: 16px;
   }
 
-
-  .sec3 .btn{
+  .sec3 .btn {
     width: 20px;
     height: 20px;
   }
-  .sec3 .btn.next{}
-  .sec3 .btn.prev{}
-
-
-
-
+  .sec3 .btn.next {
+  }
+  .sec3 .btn.prev {
+  }
 }

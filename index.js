@@ -87,6 +87,8 @@ gsap.to('.sec1 [aria-label="ball"] .img--block img', {
 document.querySelectorAll('.sec1 [aria-label="ball01"] .img--block img').forEach((el) => floatRandom(el));
 document.querySelectorAll('.sec2 [aria-label="ball02"] .img--block img').forEach((el) => floatRandom(el));
 document.querySelectorAll('.sec5 [aria-label="ball03"] .img--block img').forEach((el) => floatRandom(el));
+document.querySelectorAll('.sec3 [aria-label="ball04"] .img--block img').forEach((el) => floatRandom(el));
+document.querySelectorAll('.sec3 [aria-label="ball05"] .img--block img').forEach((el) => floatRandom(el));
 
 function floatRandom(target) {
   gsap.to(target, {
