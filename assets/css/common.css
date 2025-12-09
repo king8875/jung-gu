@@ -1,16 +1,10 @@
-.close_ic{
-    position: sticky;
-    top: 100px;
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    cursor: pointer;
-    z-index: 99999;
-}
-.close_ic img{
-    /* width: 20px; */
-    /* height: 20px; */
-    transition: all .4s ease;
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0);
 }
 
 .point-tx{
