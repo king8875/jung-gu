@@ -246,6 +246,18 @@ main {
   .sec3 .btn.prev {
     left: 50px;
   }
+
+  .sec5 .btn {
+    width: 20px;
+    height: 20px;
+    top: 60% !important;
+  }
+  .sec5 .btn.next {
+    right: -30px;
+  }
+  .sec5 .btn.prev {
+    left: -30px;
+  }
 }
 
 .layer-wrap {
