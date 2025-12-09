@@ -112,10 +112,10 @@ hr {
 
 
 /* 10. 접근성 */
-:focus {
+/* :focus {
   outline: 3px solid #007acc;
   outline-offset: 2px;
-}
+} */
 
 [hidden] {
   display: none !important;
