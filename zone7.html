@@ -15,7 +15,9 @@
           <div class="img--block">
             <img src="/assets/img/zone7_img/sec1_main_img.png" alt="우리가 몰랐던 리얼장충" />
           </div>
-          <a class="link-pin" href="/index.html" aria-label="close" style="top: 0%; height: 9%; left: 93%; width: 14%"><span class="blind">닫기</span></a>
+          <a class="link-pin" id="closeLayer" aria-label="close" style="top: 0%; height: 9%; left: 93%; width: 14%">
+            <span class="blind">닫기</span>
+          </a>
         </section>
 
         <div class="sec2">
@@ -64,32 +66,10 @@
           <div class="img--block">
             <img src="/assets/img/zone7_img/close_img.png" alt="닫기" />
           </div>
-          <a class="link-pin close--link" href="/index.html" aria-label="닫기" style="top: 12%; height: 50%; left: 50%; width: 25%"> </a>
+          <a class="link-pin close--link" id="closeLayer" aria-label="닫기" style="top: 12%; height: 50%; left: 50%; width: 25%"> </a>
         </div>
       </div>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const stickySvg = document.querySelector(".close_ic img");
-        const sec1 = document.querySelector(".sec1");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // sec1 안에 있을 때 (원래 색)
-                stickySvg.style.filter = "invert(0)"; // 검정 유지
-              } else {
-                // sec1 벗어날 때 (색 변경)
-                stickySvg.style.filter = "invert(1)"; // 흰색처럼 표현
-              }
-            });
-          },
-          { threshold: 0 }
-        );
-
-        observer.observe(sec1);
-      });
-    </script>
+ 
   </body>
 </html>
