@@ -21,6 +21,10 @@ main {
   filter: blur(20px);
   opacity: 0.25;
 }
+.body-lock {
+  overflow: hidden;
+  touch-action: none;
+}
 /* sec1 */
 .sec1,
 .sec2,
@@ -265,6 +269,5 @@ main {
   border-radius: 20px;
   margin: 60px auto; /* 화면 위 아래 공간 확보 */
   max-height: none; /* 제한 없애기 */
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-

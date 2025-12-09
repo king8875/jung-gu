@@ -269,94 +269,20 @@
       </div>
     </main>
     <script>
-      //   document.addEventListener("DOMContentLoaded", () => {
-      //     document.querySelectorAll(".open-zone").forEach((link) => {
-      //       link.addEventListener("click", function (e) {
-      //         e.preventDefault();
+      let scrollY = 0;
 
-      //         const zoneFile = this.dataset.zone;
+      function openLayer() {
+        scrollY = window.scrollY; // 현재 스크롤 위치 저장
+        document.body.style.top = `-${scrollY}px`; // 고정 전 위치 유지
+        document.body.classList.add("body-lock");
+      }
+      function closeLayer() {
+        const layer = document.getElementById("layerWrap");
+        layer.style.display = "none";
 
-      //         fetch(zoneFile)
-      //           .then((res) => res.text())
-      //           .then((html) => {
-      //             document.querySelector(".layer-content").innerHTML = html;
-
-      //             const layer = document.getElementById("layerWrap");
-      //             layer.style.display = "flex";
-      //             layer.classList.add("active"); // ← fade-in 효과
-      //           });
-      //       });
-      //     });
-
-      //     document.getElementById("layerWrap").addEventListener("click", function (e) {
-      //       if (e.target.id === "closeLayer") {
-      //         const layer = document.getElementById("layerWrap");
-      //         layer.classList.remove("active");
-      //         setTimeout(() => {
-      //           layer.style.display = "none";
-      //         }, 300);
-      //       }
-      //     });
-
-      //     const dropdown = document.querySelector(".lang-dropdown");
-      //     const currentLang = document.querySelector(".current-lang");
-
-      //     if (dropdown && currentLang) {
-      //       document.querySelectorAll(".lang-dropdown li").forEach((item) => {
-      //         item.addEventListener("click", () => {
-      //           currentLang.textContent = item.textContent;
-      //           dropdown.style.display = "none";
-      //         });
-      //       });
-
-      //       document.addEventListener("click", (e) => {
-      //         if (!e.target.closest(".lang-wrap")) {
-      //           dropdown.style.display = "none";
-      //         }
-      //       });
-      //     }
-
-      //     const swipersec3 = new Swiper(".sec3 .swiper", {
-      //       loop: true,
-      //       observer: true,
-      //       observeParents: true,
-      //       pagination: { el: ".swiper-pagination" },
-      //       navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      //       scrollbar: { el: ".swiper-scrollbar" },
-      //       breakpoints: {
-      //         1024: { slidesPerView: 3, grid: { rows: 3 }, spaceBetween: 10, enabled: false },
-      //         576: { slidesPerView: 3, spaceBetween: 5, enabled: true },
-      //         0: { slidesPerView: 1.5, spaceBetween: 5, centeredSlides: true, enabled: true },
-      //       },
-      //     });
-
-      //     const swipersec5 = new Swiper(".sec5 .swiper", {
-      //       loop: true,
-      //       pagination: { el: ".swiper-pagination" },
-      //       navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      //       scrollbar: { el: ".swiper-scrollbar" },
-      //     });
-
-      //     window.addEventListener("resize", () => {
-      //       swipersec3.update();
-      //     });
-      //   });
-
-      //   document.getElementById("layerWrap").addEventListener("click", function (e) {
-      //     const layer = document.getElementById("layerWrap");
-
-      //     if (e.target.id === "closeLayer") {
-      //       layer.classList.remove("active");
-      //       setTimeout(() => (layer.style.display = "none"), 300);
-      //       return;
-      //     }
-
-      //     if (!e.target.closest(".layer-content")) {
-      //       layer.classList.remove("active");
-      //       setTimeout(() => (layer.style.display = "none"), 300);
-      //     }
-      //   });
-
+        // body 스크롤 다시 활성화
+        document.body.classList.remove("body-lock");
+      }
       document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".open-zone").forEach((link) => {
           link.addEventListener("click", function (e) {
@@ -368,7 +294,9 @@
               .then((res) => res.text())
               .then((html) => {
                 document.querySelector(".layer-content").innerHTML = html;
-                document.getElementById("layerWrap").style.display = "flex";
+                const layer = document.getElementById("layerWrap");
+                layer.style.display = "flex";
+                openLayer(); // ★ 여기
               });
           });
         });
@@ -376,33 +304,36 @@
         // 2) zone 내부의 닫기 버튼 처리 (이벤트 위임)
         document.getElementById("layerWrap").addEventListener("click", function (e) {
           if (e.target.id === "closeLayer") {
-            this.style.display = "none";
+            closeLayer();
           }
         });
+      
         document.getElementById("layerWrap").addEventListener("click", function (e) {
           const wrapper = document.querySelector(".layer-content .wrapper");
 
-          // wrapper 클릭 시 → 닫지 않음
+          // 닫기 버튼
+          if (e.target.id === "closeLayer") {
+            this.style.display = "none";
+            closeLayer();
+            return;
+          }
+
+          // wrapper 내부 클릭 → 닫지 않음
           if (wrapper && wrapper.contains(e.target)) {
             return;
           }
 
-          // 닫기 버튼 클릭 시 → 닫힘
-          if (e.target.id === "closeLayer") {
-            this.style.display = "none";
-            return;
-          }
-
-          // wrapper 바깥(layer-content 배경) 클릭 시 → 닫힘
+          // wrapper 바깥 클릭 → 닫기
           if (!wrapper.contains(e.target)) {
             this.style.display = "none";
+            closeLayer();
           }
         });
+
         const langWrap = document.querySelector(".lang-wrap");
         const langSelect = document.querySelector(".lang-select");
         const currentLang = document.querySelector(".current-lang");
         const dropdown = document.querySelector(".lang-dropdown");
-
         // 1) 버튼 클릭 시 열기 / 닫기
         langSelect.addEventListener("click", (e) => {
           e.stopPropagation(); // 바깥 클릭 이벤트와 충돌 방지
@@ -432,6 +363,8 @@
             dropdown.style.display = "none";
           }
         });
+
+        // swiper
         const swipersec3 = new Swiper(".sec3 .swiper", {
           loop: true,
           observer: true, // ← DOM 변화 감지
