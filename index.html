@@ -307,7 +307,7 @@
             closeLayer();
           }
         });
-      
+
         document.getElementById("layerWrap").addEventListener("click", function (e) {
           const wrapper = document.querySelector(".layer-content .wrapper");
 
@@ -384,7 +384,7 @@
 
           breakpoints: {
             // 1024px 이상 → 슬라이드 OFF, 정적 그리드
-            1024: {
+            1120: {
               slidesPerView: 3,
               grid: {
                 rows: 3,
@@ -392,7 +392,6 @@
               spaceBetween: 10,
               enabled: false, // 슬라이드 기능 꺼짐
             },
-
             // 576px ~ 1023px → 슬라이드 3개씩
             576: {
               slidesPerView: 3,
