@@ -142,9 +142,9 @@ main {
   flex-direction: column;
   gap: 6px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   width: 100%;
   height: 100%;
 }
@@ -238,7 +238,7 @@ main {
   .sec3 .btn {
     width: 20px;
     height: 20px;
-    top: 76% !important;
+    top: 65% !important;
   }
   .sec3 .btn.next {
     right: 50px;
