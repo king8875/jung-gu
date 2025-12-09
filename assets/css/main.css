@@ -255,7 +255,6 @@ main {
   z-index: 9999;
   padding: 10px;
   overflow-y: auto; /* ⬅ 부모에서도 스크롤 가능 */
-  max-width: 1400px;
   margin: 0 auto;
 }
 

@@ -379,6 +379,25 @@
             this.style.display = "none";
           }
         });
+        document.getElementById("layerWrap").addEventListener("click", function (e) {
+          const wrapper = document.querySelector(".layer-content .wrapper");
+
+          // wrapper 클릭 시 → 닫지 않음
+          if (wrapper && wrapper.contains(e.target)) {
+            return;
+          }
+
+          // 닫기 버튼 클릭 시 → 닫힘
+          if (e.target.id === "closeLayer") {
+            this.style.display = "none";
+            return;
+          }
+
+          // wrapper 바깥(layer-content 배경) 클릭 시 → 닫힘
+          if (!wrapper.contains(e.target)) {
+            this.style.display = "none";
+          }
+        });
         const langWrap = document.querySelector(".lang-wrap");
         const langSelect = document.querySelector(".lang-select");
         const currentLang = document.querySelector(".current-lang");
