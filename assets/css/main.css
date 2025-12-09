@@ -188,7 +188,7 @@ main {
 }
 
 .sec5 .btn {
-  color: #ff9f31;
+  color: #fee299;
 }
 .sec5 .btn.next {
   right: -13%;
@@ -238,7 +238,7 @@ main {
   .sec3 .btn {
     width: 20px;
     height: 20px;
-    top: 65% !important;
+    top: 75% !important;
   }
   .sec3 .btn.next {
     right: 50px;
@@ -269,7 +269,7 @@ main {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 9999;
-  padding: 10px;
+  padding: 25px;
   overflow-y: auto; /* ⬅ 부모에서도 스크롤 가능 */
   margin: 0 auto;
 }
