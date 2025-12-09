@@ -74,7 +74,9 @@ svg {
   max-width: 100%;
   height: auto;
 }
-
+img{
+  width: 100%;
+}
 /* 7. 폼 요소 초기화 */
 input,
 button,
