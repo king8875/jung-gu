@@ -269,6 +269,16 @@ main {
 }
 
 /* Responsive heights for .sec3 .swiper .img--block */
+@media (max-width: 1520px) {
+   #pc-wide .sec3 .swiper .img--block {
+    height: 130px;
+  }
+}
+@media (max-width: 1450px) {
+  #pc-wide .sec3 .swiper .img--block {
+    height: 120px;
+  }
+}
 @media (max-width: 1319px) {
   .sec3 .swiper .img--block {
     height: 150px;
