@@ -202,7 +202,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
- 
+
   /* 슬라이드 높이 자동 */
   .sec3 .swiper-slide {
     width: 100% !important;
@@ -219,7 +219,7 @@ main {
   }
 }
 @media (max-width: 1169px) {
-  .sec3 .swiper .swiper-slide .swiper--link{
+  .sec3 .swiper .swiper-slide .swiper--link {
     justify-content: center;
   }
 }
