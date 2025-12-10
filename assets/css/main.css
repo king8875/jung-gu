@@ -43,9 +43,10 @@ main {
 
 .lang-wrap {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
   display: inline-block;
+  z-index: 10;
 }
 
 .lang-select {
@@ -60,33 +61,38 @@ main {
 .lang-dropdown {
   position: absolute;
   top: 120%;
-  right: 0;
+  right: -5px;
   list-style: none;
-  /* background: #fff; */
-  /* border: 1px solid #ddd; */
-  /* padding: 8px 0; */
-  /* margin: 0; */
-  display: none;
-  width: 110px;
-  /* border-radius: 6px; */
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .lang-dropdown.show {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 .lang-dropdown li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  padding: 10px;
-
+  width: 50px;
+  height: 50px;
   /* padding: 8px 12px; */
   cursor: pointer;
+  border: 2px solid #fff;
+  color: #fff;
   transition: background 0.2s;
+  margin-bottom: 10px;
 }
 
 .lang-dropdown li:hover {
   background: #f0f0f0;
+  color: #222;
 }
 /* Link pin (clickable overlay) styles ---------------------------------- */
 .link-pin {
@@ -142,7 +148,7 @@ main {
   text-align: center;
   padding: 10px;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 .sec3 .swiper .swiper-slide .swiper--link .title {
   font-size: 18px;
@@ -182,7 +188,9 @@ main {
 }
 .sec3 .btn.prev {
 }
-
+#pc-wide .sec3 .swiper{
+  overflow: visible;
+}
 .sec5 .btn {
   color: #fee299;
 }

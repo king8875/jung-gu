@@ -27,8 +27,26 @@
       <div class="overlay_bg--block">
         <img src="./assets/img/deco/overlay_bg.jpg" alt="overlay-bg" />
       </div>
+      <div class="lang-wrap">
+        <button class="lang-select">
+          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512" fill="#fff">
+            <path
+              d="M256 480c16.7 0 40.4-14.4 61.9-57.3c9.9-19.8 18.2-43.7 24.1-70.7H170c5.9 27 14.2 50.9 24.1 70.7C215.6 465.6 239.3 480 256 480zM164.3 320H347.7c2.8-20.2 4.3-41.7 4.3-64s-1.5-43.8-4.3-64H164.3c-2.8 20.2-4.3 41.7-4.3 64s1.5 43.8 4.3 64zM170 160H342c-5.9-27-14.2-50.9-24.1-70.7C296.4 46.4 272.7 32 256 32s-40.4 14.4-61.9 57.3C184.2 109.1 175.9 133 170 160zm210 32c2.6 20.5 4 41.9 4 64s-1.4 43.5-4 64h90.8c6-20.3 9.3-41.8 9.3-64s-3.2-43.7-9.3-64H380zm78.5-32c-25.9-54.5-73.1-96.9-130.9-116.3c21 28.3 37.6 68.8 47.2 116.3h83.8zm-321.1 0c9.6-47.6 26.2-88 47.2-116.3C126.7 63.1 79.4 105.5 53.6 160h83.7zm-96 32c-6 20.3-9.3 41.8-9.3 64s3.2 43.7 9.3 64H132c-2.6-20.5-4-41.9-4-64s1.4-43.5 4-64H41.3zM327.5 468.3c57.8-19.5 105-61.8 130.9-116.3H374.7c-9.6 47.6-26.2 88-47.2 116.3zm-143 0c-21-28.3-37.5-68.8-47.2-116.3H53.6c25.9 54.5 73.1 96.9 130.9 116.3zM256 512A256 256 0 1 1 256 0a256 256 0 1 1 0 512z"
+            ></path>
+          </svg>
+          <span class="current-lang"><span class="blind">KO</span></span>
+          <!-- <span class="arrow"></span> -->
+        </button>
+
+        <ul class="lang-dropdown">
+          <li data-lang="ko">한국어</li>
+          <li data-lang="en">ENG</li>
+          <li data-lang="chn">CHN</li>
+          <li data-lang="jp">JP</li>
+        </ul>
+      </div>
       <div id="mo-wide" class="wrapper">
-        <div class="lang-wrap">
+        <!-- <div class="lang-wrap">
           <button class="lang-select">
             <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512">
               <path
@@ -36,7 +54,6 @@
               ></path>
             </svg>
             <span class="current-lang"><span class="blind">KO</span></span>
-            <!-- <span class="arrow"></span> -->
           </button>
 
           <ul class="lang-dropdown">
@@ -45,7 +62,7 @@
             <li data-lang="chn">CHN</li>
             <li data-lang="jp">JP</li>
           </ul>
-        </div>
+        </div> -->
         <section class="sec1">
           <div class="img--block">
             <img src="./assets/img/bg01.jpg" alt="sec1_bg" />
@@ -283,24 +300,6 @@
         </section>
       </div>
       <div id="pc-wide" class="wrapper">
-        <div class="lang-wrap">
-          <button class="lang-select">
-            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512">
-              <path
-                d="M256 480c16.7 0 40.4-14.4 61.9-57.3c9.9-19.8 18.2-43.7 24.1-70.7H170c5.9 27 14.2 50.9 24.1 70.7C215.6 465.6 239.3 480 256 480zM164.3 320H347.7c2.8-20.2 4.3-41.7 4.3-64s-1.5-43.8-4.3-64H164.3c-2.8 20.2-4.3 41.7-4.3 64s1.5 43.8 4.3 64zM170 160H342c-5.9-27-14.2-50.9-24.1-70.7C296.4 46.4 272.7 32 256 32s-40.4 14.4-61.9 57.3C184.2 109.1 175.9 133 170 160zm210 32c2.6 20.5 4 41.9 4 64s-1.4 43.5-4 64h90.8c6-20.3 9.3-41.8 9.3-64s-3.2-43.7-9.3-64H380zm78.5-32c-25.9-54.5-73.1-96.9-130.9-116.3c21 28.3 37.6 68.8 47.2 116.3h83.8zm-321.1 0c9.6-47.6 26.2-88 47.2-116.3C126.7 63.1 79.4 105.5 53.6 160h83.7zm-96 32c-6 20.3-9.3 41.8-9.3 64s3.2 43.7 9.3 64H132c-2.6-20.5-4-41.9-4-64s1.4-43.5 4-64H41.3zM327.5 468.3c57.8-19.5 105-61.8 130.9-116.3H374.7c-9.6 47.6-26.2 88-47.2 116.3zm-143 0c-21-28.3-37.5-68.8-47.2-116.3H53.6c25.9 54.5 73.1 96.9 130.9 116.3zM256 512A256 256 0 1 1 256 0a256 256 0 1 1 0 512z"
-              ></path>
-            </svg>
-            <span class="current-lang"><span class="blind">KO</span></span>
-            <!-- <span class="arrow"></span> -->
-          </button>
-
-          <ul class="lang-dropdown">
-            <li data-lang="ko">한국어</li>
-            <li data-lang="en">ENG</li>
-            <li data-lang="chn">CHN</li>
-            <li data-lang="jp">JP</li>
-          </ul>
-        </div>
         <section class="sec1">
           <div class="img--block">
             <img src="./assets/img/bg1-pc.jpg" alt="sec1_bg" />
@@ -358,7 +357,6 @@
         <section id="sec2" class="sec2">
           <div class="img--block">
             <img src="./assets/img/bg2-pc.jpg" alt="" />
-            <!-- <img src="./assets/img/bg2.jpg" alt="" /> -->
           </div>
           <div class="link-pin" aria-label="" style="top: -2%; height: 60%; left: 50%; width: 69%">
             <div class="img--block">
@@ -393,7 +391,7 @@
               <img src="./assets/img/deco/sec2_ball_01.png" alt="" />
             </div>
           </div>
-          <div class="link-pin" style="top: 18%; height: 47%; left: 50%; width: 54%">
+          <div class="link-pin" style="top: 18%; height: 46%; left: 50%; width: 47%">
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -460,8 +458,8 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-button-prev btn prev"></div>
-              <div class="swiper-button-next btn next"></div>
+              <!-- <div class="swiper-button-prev btn prev"></div>
+              <div class="swiper-button-next btn next"></div> -->
             </div>
           </div>
         </section>
@@ -551,7 +549,7 @@
         const selector = link.dataset.target;
         // 같은 뷰(pc-wide / mo-wide) 내에서 id가 중복되어 있을 수 있으므로
         // 클릭한 요소의 상위 wrapper에서 먼저 검색합니다.
-        const parentWrapper = link.closest('#pc-wide, #mo-wide, .wrapper');
+        const parentWrapper = link.closest("#pc-wide, #mo-wide, .wrapper");
         let targetEl = null;
         if (parentWrapper) {
           targetEl = parentWrapper.querySelector(selector);
@@ -559,17 +557,17 @@
         // 없으면 문서 전체에서 찾음(안전망)
         if (!targetEl) targetEl = document.querySelector(selector);
 
-        console.debug('link-pin activated:', selector, 'parentWrapper:', parentWrapper, 'targetEl:', targetEl);
+        console.debug("link-pin activated:", selector, "parentWrapper:", parentWrapper, "targetEl:", targetEl);
         if (!targetEl) return false;
 
         const rect = targetEl.getBoundingClientRect();
         const targetY = rect.top + window.pageYOffset;
         const offset = Number(link.dataset.offset) || 0;
         // 30% 오프셋 추가
-        const percentOffset = window.innerHeight * 0.3;
+        const percentOffset = window.innerHeight * 0.2;
         const finalY = targetY - offset - percentOffset;
 
-        console.debug('target rect top:', rect.top, 'pageYOffset:', window.pageYOffset, 'finalY:', finalY);
+        console.debug("target rect top:", rect.top, "pageYOffset:", window.pageYOffset, "finalY:", finalY);
 
         gsap.to(window, {
           duration: 0.4,
@@ -662,11 +660,24 @@
         const langSelect = document.querySelector(".lang-select");
         const currentLang = document.querySelector(".current-lang");
         const dropdown = document.querySelector(".lang-dropdown");
+
+        // 초기 상태
+        dropdown.style.opacity = 0;
+        dropdown.style.pointerEvents = "none"; // 클릭 막기
+
         // 1) 버튼 클릭 시 열기 / 닫기
         langSelect.addEventListener("click", (e) => {
-          e.stopPropagation(); // 바깥 클릭 이벤트와 충돌 방지
+          e.stopPropagation();
 
-          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+          const isOpen = dropdown.style.opacity === "1";
+
+          if (isOpen) {
+            dropdown.style.opacity = "0";
+            dropdown.style.pointerEvents = "none";
+          } else {
+            dropdown.style.opacity = "1";
+            dropdown.style.pointerEvents = "auto";
+          }
         });
 
         // 2) 언어 선택
@@ -674,22 +685,16 @@
           item.addEventListener("click", (e) => {
             e.stopPropagation();
             currentLang.textContent = item.textContent;
-            dropdown.style.display = "none";
+
+            dropdown.style.opacity = "0";
+            dropdown.style.pointerEvents = "none";
           });
         });
 
         // 3) 바깥 클릭 시 닫기
-        document.addEventListener("click", (e) => {
-          if (!langWrap.contains(e.target)) {
-            dropdown.style.display = "none";
-          }
-        });
-
-        // 바깥 클릭 시 닫기
-        document.addEventListener("click", (e) => {
-          if (!e.target.closest(".lang-wrap")) {
-            dropdown.style.display = "none";
-          }
+        document.addEventListener("click", () => {
+          dropdown.style.opacity = "0";
+          dropdown.style.pointerEvents = "none";
         });
 
         // swiper
@@ -697,17 +702,10 @@
           loop: true,
           observer: true, // ← DOM 변화 감지
           observeParents: true, // ← 부모 요소 사이즈 변화 감지
-          pagination: {
-            el: ".swiper-pagination",
-          },
 
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-
-          scrollbar: {
-            el: ".swiper-scrollbar",
+            nextEl: ".sec3 .swiper-button-next",
+            prevEl: ".sec3 .swiper-button-prev",
           },
 
           breakpoints: {
