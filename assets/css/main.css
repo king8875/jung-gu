@@ -318,7 +318,7 @@ main {
     align-items: start;
     flex-direction: column;
     gap: 30px;
-    padding: 40px 45px;
+    padding: 40px 30px;
   }
 }
 @media screen and (max-width: 576px) {
