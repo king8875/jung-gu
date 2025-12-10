@@ -62,28 +62,6 @@
         </div>
       </div>
     </main>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const stickySvg = document.querySelector(".close_ic img");
-        const sec1 = document.querySelector(".sec1");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // sec1 안에 있을 때 (원래 색)
-                stickySvg.style.filter = "invert(0)"; // 검정 유지
-              } else {
-                // sec1 벗어날 때 (색 변경)
-                stickySvg.style.filter = "invert(1)"; // 흰색처럼 표현
-              }
-            });
-          },
-          { threshold: 0 }
-        );
-
-        observer.observe(sec1);
-      });
-    </script>
+  
   </body>
 </html>
