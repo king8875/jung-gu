@@ -197,12 +197,12 @@ main {
   left: -13%;
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1170px) {
   .sec3 .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-
+ 
   /* 슬라이드 높이 자동 */
   .sec3 .swiper-slide {
     width: 100% !important;
@@ -218,7 +218,11 @@ main {
     display: none !important;
   }
 }
-
+@media (max-width: 1169px) {
+  .sec3 .swiper .swiper-slide .swiper--link{
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 576px) {
   .sec3 .swiper .swiper-slide .swiper--link {
     padding: 5px;
@@ -282,4 +286,46 @@ main {
   margin: 60px auto; /* 화면 위 아래 공간 확보 */
   max-height: none; /* 제한 없애기 */
   transition: all 0.4s ease;
+}
+
+/* footer */
+.footer-wrap {
+  padding: 40px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Pretendard", sans-serif;
+  background: #fff;
+}
+
+.footer-logo img {
+  width: 220px; /* 필요 시 조절 */
+}
+
+.footer-info {
+  font-size: 15px;
+  color: #575757;
+}
+
+.footer-info .footer-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #000;
+}
+@media screen and (max-width: 840px) {
+  .footer-wrap {
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 45px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-info {
+    font-size: 12px;
+  }
+  .footer-info .footer-title {
+    font-size: 16px;
+  }
 }
