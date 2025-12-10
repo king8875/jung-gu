@@ -276,8 +276,11 @@ main {
   padding: 25px;
   overflow-y: auto; /* ⬅ 부모에서도 스크롤 가능 */
   margin: 0 auto;
-}
+  transition: all 0.4s ease;
 
+}
+.layer-wrap.active {
+}
 .layer-content {
   background: transparent;
   width: 100%;
